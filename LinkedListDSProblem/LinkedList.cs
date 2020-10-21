@@ -52,6 +52,7 @@ namespace LinkedListDSProblem
                 node.next = head;
             }
             head = node;
+            Console.WriteLine("{0} added before the head on the list", node.data);
         }
     }
 }

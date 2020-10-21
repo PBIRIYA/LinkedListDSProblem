@@ -18,6 +18,12 @@ namespace LinkedListDSProblem
             list2.AddBefore(30);
             list2.AddBefore(56);
             list.Display();
+            Console.WriteLine("\n=================================================================");
+            LinkedList list3 = new LinkedList();
+            list3.Add(56);
+            list3.Add(30);
+            list3.Add(70);
+            list3.Display();
         }
     }
 }
