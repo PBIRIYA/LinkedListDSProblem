@@ -24,6 +24,12 @@ namespace LinkedListDSProblem
             list3.Add(30);
             list3.Add(70);
             list3.Display();
+            Console.WriteLine("\n=================================================================");
+            LinkedList list4 = new LinkedList();
+            list4.Add(56);
+            list4.Add(70);
+            list4.InsertAtParticularPosition(2, 30);
+            list4.Display();
         }
     }
 }
