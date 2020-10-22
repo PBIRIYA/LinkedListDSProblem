@@ -53,5 +53,22 @@ namespace LinkedListDSProblem
             }
             head = node;
         }
+        public void AppendNode(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+        }
     }
 }
