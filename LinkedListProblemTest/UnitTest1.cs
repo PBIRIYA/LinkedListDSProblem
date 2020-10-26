@@ -29,5 +29,19 @@ namespace LinkedListProblemTest
             Node expected = list.Search(40);
             Assert.AreEqual(actual.GetType(), expected.GetType());
         }
+        [TestMethod]
+        public void GivenALinkedListNumbers_WhenDeletingANodeWithGivenValue_ShouldPassLinkedListResult()
+        {
+            int expected = 70;
+            LinkedList list = new LinkedList();
+            list.AddToTail(56);
+            list.AddToTail(30);
+            list.AddToTail(40);
+            list.AddToTail(70);
+            list.DeleteWithValue(40);
+            Node node = list.Search(30);
+            int actual = node.next.data;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
