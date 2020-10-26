@@ -12,5 +12,10 @@ namespace LinkedListDSProblem
         {
             this.data = data;
         }
+
+        public static implicit operator Node(LinkedListNode<int> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -165,5 +165,29 @@ namespace LinkedListDSProblem
             }
             return size;
         }
+        public void AddWithSorting(int data)
+        {
+            LinkedListNode<int> node = new LinkedListNode<int>(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                if (this.head.data > data)
+                {
+                    node.next = this.head;
+                    this.head = node;
+                }
+                else
+                {
+                    LinkedListNode<int> temp = this.head;
+                    while (temp.next != null && temp.Next.data < data)
+                    {
+                        temp = temp.next;
+                    }
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+            }
+        }
     }
 }
